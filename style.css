@@ -1086,13 +1086,13 @@ nav a:hover {
 
 footer {
     width: 100%;
-    min-height: 520px;
+    min-height: 430px;
 
     background: #050505;
 
     border-top: 1px solid #27272a;
 
-    padding: 90px 7% 30px;
+    padding: 80px 7% 30px;
 
     display: flex;
     flex-direction: column;
@@ -1100,30 +1100,38 @@ footer {
 }
 
 
-/* CONTEÚDO */
+/* =========================
+   CONTEÚDO
+========================= */
 
 .footer-conteudo {
     width: 100%;
 
     display: grid;
 
-    grid-template-columns: 1fr 2fr 1fr;
-
-    gap: 60px;
+    grid-template-columns: 1fr 1fr;
 
     align-items: start;
 }
 
 
-/* MARCA */
+/* =========================
+   MARCA
+========================= */
 
 .footer-marca {
     display: flex;
+
     flex-direction: column;
-    gap: 30px;
+
+    gap: 25px;
 }
 
 .footer-fr {
+    display: inline-block;
+
+    width: fit-content;
+
     font-size: 75px;
 
     font-weight: 900;
@@ -1133,6 +1141,8 @@ footer {
     letter-spacing: -7px;
 
     color: #ffffff;
+
+    text-decoration: none;
 }
 
 .footer-fr span {
@@ -1142,6 +1152,8 @@ footer {
 .footer-marca p {
     max-width: 230px;
 
+    margin: 0;
+
     color: #71717a;
 
     font-size: 14px;
@@ -1150,72 +1162,9 @@ footer {
 }
 
 
-/* CENTRO */
-
-.footer-centro {
-    display: flex;
-    flex-direction: column;
-
-    align-items: flex-start;
-
-    padding-top: 10px;
-}
-
-.footer-label {
-    color: #71717a;
-
-    font-size: 10px;
-
-    font-weight: bold;
-
-    letter-spacing: 3px;
-
-    margin-bottom: 25px;
-}
-
-.footer-centro h2 {
-    max-width: 650px;
-
-    margin: 0 0 40px;
-
-    font-size: clamp(50px, 6vw, 85px);
-
-    line-height: 0.9;
-
-    letter-spacing: -5px;
-}
-
-.footer-centro h2 span {
-    color: #a78bfa;
-}
-
-
-/* BOTÃO */
-
-.footer-botao {
-    display: inline-block;
-
-    padding: 17px 28px;
-
-    background: #ffffff;
-
-    color: #000000;
-
-    text-decoration: none;
-
-    font-size: 13px;
-
-    font-weight: bold;
-
-    transition: 0.3s;
-}
-
-.footer-botao:hover {
-    transform: translateY(-4px);
-}
-
-
-/* NAVEGAÇÃO */
+/* =========================
+   NAVEGAÇÃO
+========================= */
 
 .footer-nav {
     display: flex;
@@ -1224,7 +1173,11 @@ footer {
 
     align-items: flex-start;
 
-    gap: 15px;
+    gap: 16px;
+
+    justify-self: end;
+
+    min-width: 150px;
 }
 
 .footer-nav > span {
@@ -1232,9 +1185,11 @@ footer {
 
     font-size: 10px;
 
-    letter-spacing: 2px;
+    font-weight: bold;
 
-    margin-bottom: 15px;
+    letter-spacing: 3px;
+
+    margin-bottom: 10px;
 }
 
 .footer-nav a {
@@ -1242,7 +1197,7 @@ footer {
 
     text-decoration: none;
 
-    font-size: 13px;
+    font-size: 14px;
 
     transition: 0.3s;
 }
@@ -1254,7 +1209,9 @@ footer {
 }
 
 
-/* FINAL */
+/* =========================
+   FINAL
+========================= */
 
 .footer-final {
     width: 100%;
@@ -1265,7 +1222,7 @@ footer {
 
     display: flex;
 
-    justify-content: space-between;
+    justify-content: flex-start;
 
     align-items: center;
 }
@@ -1276,307 +1233,45 @@ footer {
     font-size: 10px;
 }
 
+
 /* =========================
    RESPONSIVIDADE
 ========================= */
 
 @media (max-width: 800px) {
 
-    /* HEADER */
-
-    header {
-        padding: 25px 6%;
-    }
-
-    nav {
-        display: none;
-    }
-
-    .menu-botao {
-        display: none;
-    }
-
-
-    /* HERO */
-
-    .hero {
-        min-height: 100vh;
-
-        padding: 130px 6% 80px;
-
-        align-items: center;
-    }
-
-    .hero h1 {
-        font-size: clamp(48px, 14vw, 65px);
-
-        line-height: 0.92;
-
-        letter-spacing: -4px;
-    }
-
-    .hero-tag {
-        font-size: 9px;
-
-        letter-spacing: 2px;
-    }
-
-    .descricao {
-        font-size: 16px;
-
-        max-width: 100%;
-    }
-
-    .hero-botoes {
-        flex-direction: column;
-
-        align-items: flex-start;
-
-        gap: 20px;
-    }
-
-    .hero-numero {
-        display: none;
-    }
-
-
-    /* SERVIÇOS */
-
-    .servicos {
-        padding: 100px 6%;
-    }
-
-    .servicos h2 {
-        font-size: 48px;
-
-        letter-spacing: -3px;
-
-        margin-bottom: 60px;
-    }
-
-    .servicos-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .servico-card {
-        min-height: 350px;
-    }
-
-
-    /* PROJETOS */
-
-    .projetos {
-        padding: 100px 6%;
-    }
-
-    .projetos h2 {
-        font-size: 48px;
-
-        letter-spacing: -3px;
-
-        margin-bottom: 60px;
-    }
-
-    .projetos-grid {
-        grid-template-columns: 1fr;
-
-        gap: 60px;
-    }
-
-    .projeto-imagem {
-        height: 350px;
-    }
-
-    .projeto-info {
-        flex-direction: column;
-
-        gap: 10px;
-    }
-
-    .projeto-categoria {
-        text-align: left;
-    }
-
-
-    /* PROCESSO */
-
-    .processo {
-        padding: 100px 6%;
-    }
-
-    .processo h2 {
-        font-size: 48px;
-
-        letter-spacing: -3px;
-
-        margin-bottom: 60px;
-    }
-
-    .passos {
-        grid-template-columns: 1fr;
-    }
-
-    .passo {
-        min-height: 320px;
-    }
-
-
-    /* CONFIANÇA */
-
-    .confianca {
-        padding: 100px 6%;
-    }
-
-    .confianca-intro {
-        margin-bottom: 60px;
-    }
-
-    .confianca-intro h2 {
-        font-size: 48px;
-
-        letter-spacing: -3px;
-    }
-
-    .confianca-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .confianca-item {
-        min-height: 300px;
-
-        padding: 30px;
-    }
-
-    .confianca-item h3 {
-        margin-top: 60px;
-    }
-
-
-    /* CONTATO */
-
-    .contato {
-        padding: 120px 6%;
-
-        min-height: 70vh;
-    }
-
-    .contato h2 {
-        font-size: 55px;
-
-        letter-spacing: -3px;
-    }
-
-    .formulario {
-        width: 100%;
-
-        margin-top: 40px;
-    }
-
-    .formulario .botao {
-        width: 100%;
-
-        text-align: center;
-    }
-
-
-    /* MOCKUPS */
-
-    .mockup-site {
-        left: 7%;
-        right: 7%;
-        top: 10%;
-        bottom: 10%;
-
-        padding: 18px;
-    }
-
-    .mockup-conteudo h4 {
-        font-size: 36px;
-
-        letter-spacing: -2px;
-    }
-
-
-    /* FOOTER */
-
     footer {
-        min-height: 700px;
+        min-height: 500px;
 
         padding: 70px 6% 25px;
-
-        flex-direction: column;
-
-        align-items: flex-start;
-
-        gap: 10px;
     }
 
     .footer-conteudo {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
 
-        gap: 70px;
+        gap: 40px;
     }
 
     .footer-fr {
         font-size: 65px;
     }
 
-    .footer-centro h2 {
-        font-size: 55px;
+    .footer-marca p {
+        font-size: 13px;
 
-        letter-spacing: -4px;
+        max-width: 180px;
     }
 
     .footer-nav {
-        margin-top: 10px;
+        justify-self: end;
+    }
+
+    .footer-nav a {
+        font-size: 13px;
     }
 
     .footer-final {
-        flex-direction: column;
-
-        align-items: flex-start;
-
-        gap: 12px;
+        padding-top: 20px;
     }
 
-}
-
-/* =========================
-   ANIMAÇÕES
-========================= */
-
-.antes-de-aparecer {
-    opacity: 0;
-
-    transform: translateY(40px);
-
-    transition:
-        opacity 0.8s ease,
-        transform 0.8s ease;
-}
-
-.aparecer {
-    opacity: 1;
-
-    transform: translateY(0);
-}
-
-.servico-card:nth-child(2) {
-    transition-delay: 0.15s;
-}
-
-.servico-card:nth-child(3) {
-    transition-delay: 0.3s;
-}
-
-.projeto:nth-child(2) {
-    transition-delay: 0.15s;
-}
-
-.passo:nth-child(2) {
-    transition-delay: 0.15s;
-}
-
-.passo:nth-child(3) {
-    transition-delay: 0.3s;
 }
