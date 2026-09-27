@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     const elementos = document.querySelectorAll(
-        ".hero-conteudo, .servico-card, .projeto, .passo, .contato"
+        ".hero-conteudo, .servico-card, .projeto, .passo, .confianca-item, .contato"
     );
 
     const observer = new IntersectionObserver(
@@ -47,11 +47,12 @@ if (formulario) {
         const servico = document.getElementById("servico").value;
         const mensagem = document.getElementById("mensagem").value;
 
-        const texto =
-            `Olá! Meu nome é ${nome}.%0A` +
-            `Empresa: ${empresa || "Não informado"}%0A` +
-            `Serviço: ${servico}%0A%0A` +
-            `Projeto:%0A${mensagem}`;
+        const texto = encodeURIComponent(
+            `Olá! Meu nome é ${nome}.\n` +
+            `Empresa: ${empresa || "Não informado"}\n` +
+            `Serviço: ${servico}\n\n` +
+            `Projeto:\n${mensagem}`
+        );
 
         const numero = "5574999136969";
 

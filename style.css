@@ -457,6 +457,8 @@ nav a:hover {
     background: #18181b;
 
     margin-bottom: 25px;
+
+    transition: 0.5s;
 }
 
 
@@ -538,10 +540,6 @@ nav a:hover {
 
 
 /* HOVER */
-
-.projeto-imagem {
-    transition: 0.5s;
-}
 
 .projeto:hover .projeto-imagem {
     transform: scale(0.98);
@@ -706,6 +704,84 @@ nav a:hover {
 }
 
 /* =========================
+   CONFIANÇA
+========================= */
+
+.confianca {
+    padding: 150px 7%;
+
+    background: #0a0a0a;
+}
+
+.confianca-intro {
+    max-width: 900px;
+
+    margin-bottom: 100px;
+}
+
+.confianca-intro h2 {
+    font-size: clamp(45px, 6vw, 80px);
+
+    line-height: 0.95;
+
+    letter-spacing: -4px;
+
+    margin-top: 30px;
+}
+
+.confianca-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    border-top: 1px solid #27272a;
+
+    border-left: 1px solid #27272a;
+}
+
+.confianca-item {
+    min-height: 280px;
+
+    padding: 40px;
+
+    border-right: 1px solid #27272a;
+
+    border-bottom: 1px solid #27272a;
+
+    transition: 0.4s;
+}
+
+.confianca-item:hover {
+    background: #111111;
+}
+
+.confianca-item > span {
+    color: #71717a;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+}
+
+.confianca-item h3 {
+    font-size: 28px;
+
+    letter-spacing: -1px;
+
+    margin: 70px 0 15px;
+}
+
+.confianca-item p {
+    max-width: 400px;
+
+    color: #a1a1aa;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+/* =========================
    CONTATO
 ========================= */
 
@@ -782,47 +858,90 @@ nav a:hover {
     z-index: 2;
 }
 
-.contato-acoes {
+/* =========================
+   FORMULÁRIO
+========================= */
+
+.formulario {
+    max-width: 700px;
+
+    margin-top: 50px;
+
     display: flex;
 
-    align-items: center;
+    flex-direction: column;
 
-    gap: 25px;
+    gap: 28px;
 
     position: relative;
 
     z-index: 2;
 }
 
-.contato-acoes span {
-    color: #71717a;
-
-    font-size: 11px;
-
-    letter-spacing: 1px;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-    padding: 40px 7%;
-
+.campo {
     display: flex;
 
-    justify-content: space-between;
+    flex-direction: column;
 
-    align-items: center;
-
-    border-top: 1px solid #27272a;
+    gap: 10px;
 }
 
-footer p {
-    color: #71717a;
+.campo label {
+    color: #a1a1aa;
 
-    font-size: 13px;
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+
+    padding: 17px 18px;
+
+    background: #111111;
+
+    border: 1px solid #27272a;
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+.campo textarea {
+    resize: vertical;
+
+    min-height: 140px;
+}
+
+.campo input::placeholder,
+.campo textarea::placeholder {
+    color: #52525b;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    border-color: #8b5cf6;
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.25);
+}
+
+.formulario .botao {
+    border: none;
+
+    cursor: pointer;
+
+    width: fit-content;
 }
 
 /* =========================
@@ -962,125 +1081,66 @@ footer p {
 }
 
 /* =========================
-   CONFIANÇA
-========================= */
-
-.confianca {
-    padding: 150px 7%;
-
-    background: #0a0a0a;
-}
-
-.confianca-intro {
-    max-width: 900px;
-
-    margin-bottom: 100px;
-}
-
-.confianca-intro h2 {
-    font-size: clamp(45px, 6vw, 80px);
-
-    line-height: 0.95;
-
-    letter-spacing: -4px;
-
-    margin-top: 30px;
-}
-
-.confianca-grid {
-    display: grid;
-
-    grid-template-columns: repeat(2, 1fr);
-
-    border-top: 1px solid #27272a;
-
-    border-left: 1px solid #27272a;
-}
-
-.confianca-item {
-    min-height: 280px;
-
-    padding: 40px;
-
-    border-right: 1px solid #27272a;
-
-    border-bottom: 1px solid #27272a;
-
-    transition: 0.4s;
-}
-
-.confianca-item:hover {
-    background: #111111;
-}
-
-.confianca-item > span {
-    color: #71717a;
-
-    font-size: 12px;
-
-    letter-spacing: 2px;
-}
-
-.confianca-item h3 {
-    font-size: 28px;
-
-    letter-spacing: -1px;
-
-    margin: 70px 0 15px;
-}
-
-.confianca-item p {
-    max-width: 400px;
-
-    color: #a1a1aa;
-
-    font-size: 15px;
-
-    line-height: 1.7;
-}
-
-/* =========================
    FOOTER
 ========================= */
 
 footer {
-    padding: 70px 7% 30px;
+    width: 100%;
+    min-height: 520px;
 
     background: #050505;
 
     border-top: 1px solid #27272a;
-}
 
-.footer-top {
+    padding: 90px 7% 30px;
+
     display: flex;
-
+    flex-direction: column;
     justify-content: space-between;
-
-    align-items: flex-start;
-
-    padding-bottom: 80px;
-
-    border-bottom: 1px solid #27272a;
 }
 
-.footer-logo {
+
+/* CONTEÚDO */
+
+.footer-conteudo {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 2fr 1fr;
+
+    gap: 60px;
+
+    align-items: start;
+}
+
+
+/* MARCA */
+
+.footer-marca {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.footer-fr {
+    font-size: 75px;
+
+    font-weight: 900;
+
+    line-height: 0.8;
+
+    letter-spacing: -7px;
+
     color: #ffffff;
-
-    text-decoration: none;
-
-    font-size: 45px;
-
-    font-weight: 800;
-
-    letter-spacing: -4px;
 }
 
-.footer-logo span {
+.footer-fr span {
     color: #8b5cf6;
 }
 
-.footer-top p {
-    max-width: 250px;
+.footer-marca p {
+    max-width: 230px;
 
     color: #71717a;
 
@@ -1089,127 +1149,131 @@ footer {
     line-height: 1.6;
 }
 
-.footer-bottom {
-    padding-top: 30px;
+
+/* CENTRO */
+
+.footer-centro {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    padding-top: 10px;
+}
+
+.footer-label {
+    color: #71717a;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 25px;
+}
+
+.footer-centro h2 {
+    max-width: 650px;
+
+    margin: 0 0 40px;
+
+    font-size: clamp(50px, 6vw, 85px);
+
+    line-height: 0.9;
+
+    letter-spacing: -5px;
+}
+
+.footer-centro h2 span {
+    color: #a78bfa;
+}
+
+
+/* BOTÃO */
+
+.footer-botao {
+    display: inline-block;
+
+    padding: 17px 28px;
+
+    background: #ffffff;
+
+    color: #000000;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.footer-botao:hover {
+    transform: translateY(-4px);
+}
+
+
+/* NAVEGAÇÃO */
+
+.footer-nav {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 15px;
+}
+
+.footer-nav > span {
+    color: #52525b;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+.footer-nav a {
+    color: #a1a1aa;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+.footer-nav a:hover {
+    color: #ffffff;
+
+    transform: translateX(5px);
+}
+
+
+/* FINAL */
+
+.footer-final {
+    width: 100%;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #27272a;
 
     display: flex;
 
     justify-content: space-between;
 
     align-items: center;
-
-    gap: 30px;
 }
 
-.footer-bottom > span {
+.footer-final span {
     color: #52525b;
 
-    font-size: 11px;
-}
-
-.footer-links {
-    display: flex;
-
-    gap: 25px;
-}
-
-.footer-links a {
-    color: #71717a;
-
-    text-decoration: none;
-
-    font-size: 11px;
-
-    transition: 0.3s;
-}
-
-.footer-links a:hover {
-    color: #ffffff;
-}
-
-/* =========================
-   FORMULÁRIO
-========================= */
-
-.formulario {
-    max-width: 700px;
-
-    margin-top: 50px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 28px;
-
-    position: relative;
-
-    z-index: 2;
-}
-
-.campo {
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 10px;
-}
-
-.campo label {
-    color: #a1a1aa;
-
-    font-size: 12px;
-
-    letter-spacing: 1px;
-
-    text-transform: uppercase;
-}
-
-.campo input,
-.campo select,
-.campo textarea {
-    width: 100%;
-
-    padding: 17px 18px;
-
-    background: #111111;
-
-    border: 1px solid #27272a;
-
-    color: #ffffff;
-
-    font-family: inherit;
-
-    font-size: 15px;
-
-    outline: none;
-
-    transition: 0.3s;
-}
-
-.campo textarea {
-    resize: vertical;
-
-    min-height: 140px;
-}
-
-.campo input::placeholder,
-.campo textarea::placeholder {
-    color: #52525b;
-}
-
-.campo input:focus,
-.campo select:focus,
-.campo textarea:focus {
-    border-color: #8b5cf6;
-}
-
-.formulario .botao {
-    border: none;
-
-    cursor: pointer;
-
-    width: fit-content;
+    font-size: 10px;
 }
 
 /* =========================
@@ -1357,6 +1421,37 @@ footer {
     }
 
 
+    /* CONFIANÇA */
+
+    .confianca {
+        padding: 100px 6%;
+    }
+
+    .confianca-intro {
+        margin-bottom: 60px;
+    }
+
+    .confianca-intro h2 {
+        font-size: 48px;
+
+        letter-spacing: -3px;
+    }
+
+    .confianca-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .confianca-item {
+        min-height: 300px;
+
+        padding: 30px;
+    }
+
+    .confianca-item h3 {
+        margin-top: 60px;
+    }
+
+
     /* CONTATO */
 
     .contato {
@@ -1371,19 +1466,43 @@ footer {
         letter-spacing: -3px;
     }
 
-    .contato-acoes {
-        flex-direction: column;
+    .formulario {
+        width: 100%;
 
-        align-items: flex-start;
+        margin-top: 40px;
+    }
 
-        gap: 18px;
+    .formulario .botao {
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    /* MOCKUPS */
+
+    .mockup-site {
+        left: 7%;
+        right: 7%;
+        top: 10%;
+        bottom: 10%;
+
+        padding: 18px;
+    }
+
+    .mockup-conteudo h4 {
+        font-size: 36px;
+
+        letter-spacing: -2px;
     }
 
 
     /* FOOTER */
 
     footer {
-        padding: 30px 6%;
+        min-height: 700px;
+
+        padding: 70px 6% 25px;
 
         flex-direction: column;
 
@@ -1392,86 +1511,33 @@ footer {
         gap: 10px;
     }
 
-    .mockup-site {
-    left: 7%;
-    right: 7%;
-    top: 10%;
-    bottom: 10%;
+    .footer-conteudo {
+        grid-template-columns: 1fr;
 
-    padding: 18px;
-}
+        gap: 70px;
+    }
 
-.mockup-conteudo h4 {
-    font-size: 36px;
+    .footer-fr {
+        font-size: 65px;
+    }
 
-    letter-spacing: -2px;
-}
+    .footer-centro h2 {
+        font-size: 55px;
 
-.confianca {
-    padding: 100px 6%;
-}
+        letter-spacing: -4px;
+    }
 
-.confianca-intro {
-    margin-bottom: 60px;
-}
+    .footer-nav {
+        margin-top: 10px;
+    }
 
-.confianca-intro h2 {
-    font-size: 48px;
+    .footer-final {
+        flex-direction: column;
 
-    letter-spacing: -3px;
-}
+        align-items: flex-start;
 
-.confianca-grid {
-    grid-template-columns: 1fr;
-}
-
-.confianca-item {
-    min-height: 300px;
-
-    padding: 30px;
-}
-
-.confianca-item h3 {
-    margin-top: 60px;
-}
-
-footer {
-    padding: 60px 6% 25px;
-}
-
-.footer-top {
-    flex-direction: column;
-
-    gap: 25px;
-
-    padding-bottom: 50px;
-}
-
-.footer-bottom {
-    flex-direction: column;
-
-    align-items: flex-start;
-
-    gap: 25px;
-}
-
-.footer-links {
-    flex-wrap: wrap;
-
-    gap: 18px;
-}
-
-.formulario {
-    width: 100%;
-
-    margin-top: 40px;
-}
-
-.formulario .botao {
-    width: 100%;
-
-    text-align: center;
-}
+        gap: 12px;
+    }
 
 }
 
